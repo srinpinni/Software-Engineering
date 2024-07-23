@@ -2,7 +2,14 @@ def encode(password):
     encoded_password = ''.join(str(int(char) + 3) for char in password)
     return encoded_password
 
-
+def decode(password):
+    final = []
+    for num in password:
+        final.append(int(num)-3)
+    string = ''
+    for num in final:
+        string += str(num)
+    return string
 
 def main():
     encoded_password = None
